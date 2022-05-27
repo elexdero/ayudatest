@@ -136,7 +136,7 @@ namespace PA.Controllers
 
                 Document doc = new Document(PageSize.LETTER);
                 MemoryStream ms = new MemoryStream();
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\REGISTRO AYUDATEST_" + usuario._ApPaterno.Substring(0, 1) + usuario._ApMaterno.Substring(0, 1) + usuario._Nombre.Substring(0, 1) + usuario._Boleta + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\REGISTRO AYUDATEST_" + usuario._ApPaterno.Substring(0, 1) + usuario._ApMaterno.Substring(0, 1) + usuario._Nombre.Substring(0, 1) + usuario._Boleta + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\REGISTRO AYUDATEST_" + usuario._ApPaterno.Substring(0, 1) + usuario._ApMaterno.Substring(0, 1) + usuario._Nombre.Substring(0, 1) + usuario._Boleta + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -580,7 +580,7 @@ namespace PA.Controllers
             if (ViewBag.CResA <= 20)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -636,7 +636,7 @@ namespace PA.Controllers
             else if (ViewBag.CResA > 20 & ViewBag.CResA <= 32)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + ViewBag.Nom + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -693,7 +693,7 @@ namespace PA.Controllers
             else if (ViewBag.CResA > 32 & ViewBag.CResA <= 42)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -750,7 +750,7 @@ namespace PA.Controllers
             else if (ViewBag.CResA > 42 & ViewBag.CResA <= 60)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + ViewBag.Nom + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -807,7 +807,7 @@ namespace PA.Controllers
             else if (ViewBag.CResA > 60)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST ANSIEDAD_" + ViewBag.Nom + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -901,7 +901,7 @@ namespace PA.Controllers
             if (ViewBag.CResD <= 21)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -955,7 +955,7 @@ namespace PA.Controllers
             else if (ViewBag.CResD > 21 & ViewBag.CResD < 32)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -1009,7 +1009,7 @@ namespace PA.Controllers
             else if (ViewBag.CResD > 32 & ViewBag.CResD <= 42)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -1064,7 +1064,7 @@ namespace PA.Controllers
             else if (ViewBag.CResD > 42 & ViewBag.CResD <= 60)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 // PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF
@@ -1119,7 +1119,7 @@ namespace PA.Controllers
             else if (ViewBag.CResD >60)
             {
                 Document doc = new Document(PageSize.LETTER);
-                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"D:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"F:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
                 //PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@"E:\PA\wwwroot\Sources\RESULTADOS TEST DEPRESION_" + usuario._ID.ToString() + ".pdf", FileMode.Create));
 
                 #region PDF

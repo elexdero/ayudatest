@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Resultados";
+}
+
+<style>
+    table, th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #fac3f1;
+        text-align: center;
+    }
+
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #af276b;
+        text-align: center;
+        color: white;
+    }
+
+    #TOT {
+        background-color: #87fbff;
+    }
+
+    #TOT1 {
+        background-color: #009499;
+    }
+
+    h1 {
+        text-align: center;
+        color: #af276b;
+    }
+
+    h2 {
+        text-align: center;
+        color: #af276b;
+        font-size: 25px;
+
+    }
+
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+</style>
+<h1>RESULTADOS DEL TEST DE ANSIEDAD</h1>
+<br />
+<table style="width: 100%;">
+    <tr>
+        <th id="TOT">TOTAL</th>
+        <td id="TOT1">@ViewBag.CResA</td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<h2><b>@ViewBag.Diag</b></h2>
+<br />
+<br />
+<br />
+<section class="Padre">
+    <a asp-action="C2" class="btn">CONTINUAR AL SIGUIENTE TEST</a>
+    <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+</section>
