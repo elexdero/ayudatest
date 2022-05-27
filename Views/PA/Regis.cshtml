@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Regis";
+}
+<style>
+    h1 {
+        background-color: #6b1740;
+        border-radius: 10px;
+        color: white;
+    }
+</style>
+<h1>POR FAVOR INGRESA LOS DATOS QUE SE TE SOLICITAN: </h1>
+<br />
+<form asp-action="RegisConfirm" method="post">
+    <label for="Nombre">Nombre: </label>
+    <input type="text" name="Nombre" required />
+    <br />
+    <label for="ApPaterno">Apellido Paterno: </label>
+    <input type="text" name="ApPaterno" required />
+    <br />
+    <label for="ApMaterno">Apellido Materno: </label>
+    <input type="text" name="ApMaterno" required />
+    <br />
+    <label for="Boleta">Boleta: </label>
+    <input type="text" name="Boleta" required />
+    <br />
+    <label for="TelU">Teléfono del Usuario: </label>
+    <input type="number" name="TelU" required />
+    <br />
+    <label for="TelT">Teléfono del Tutor: </label>
+    <input type="number" name="TelT" required />
+    <br />
+    <button type="submit" class="btn btn-primary">GENERAR ID</button>
+</form>
+<br />
+

@@ -1,0 +1,89 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Registrados";
+}
+
+<style>
+    table, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #fac3f1;
+        text-align: center;
+    }
+
+    th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #af276b;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        color: #af276b;
+    }
+
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .navegacion {
+        display: inline-block;
+        background-color: #af276b; 
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+</style>
+ <br /> <br /> <br /> <br /> <br /> <br />
+<h1>USUARIOS QUE HAN SIDO INGRESADOS </h1>
+<br />
+<table style="width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>BOLETA</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO PATERNO</th>
+        <th>APELLIDO MATERNO</th>
+        <th>TELEFONO</th>
+    </tr>
+    @foreach (var fila in @ViewBag.Usuarios.Rows)
+    {
+        <tr>
+            <td>@fila["ID"]</td>
+            <td>@fila["Boleta"]</td>
+            <td>@fila["Nombre"]</td>
+            <td>@fila["ApPaterno"]</td>
+            <td>@fila["ApMaterno"]</td>
+            <td>@fila["TelUser"]</td>
+        </tr>
+
+    }
+</table>
+<br />
+<hr />
+<br />
+<h1>Eliminar Usuario</h1>
+<form asp-action="Eliminar" method="post">
+    ID: <input asp-for="_ID" required class="form-control" />
+    <br />
+    <section class="Padre">
+        <button type="submit" class="btn">ELIMINAR</button>
+        <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+    </section>
+</form>
+<nav class="navegacion" align="center">
+        <a asp-action="UpdateAn" class="navegacion">ACTUALIZAR TEST DE ANSIEDAD</a>
+        <a asp-action="UpdateDe" class="navegacion">ACTUALIZAR TEST DE DEPRESIÓN</a>
+</nav>
+

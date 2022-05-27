@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    h1{
+        background-color: #6b1740;
+        border-radius: 10px;
+        color: white;
+    }
+</style>
+<h1>@ViewBag.Mensaje</h1>
+<hr />
+<h2>SELECIONA LA OPCIÓN QUE DESEAS REALIZAR</h2>
+<br />
+<br />
+<a asp-controller="PA" asp-action="Regis" class="btn btn-primary">REGISTRARSE</a>
+<br />
+<br />
+<a asp-controller="PA" asp-action="Regis" class="btn btn-primary">REALIZAR CUESTIONARIO</a>

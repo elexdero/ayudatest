@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "ACERCA DE";
+}
+
+<style>
+    .introducción .caja-contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+        .introducción .caja-contenedor .caja {
+            flex: 1 1 30rem;
+            border-radius: 0.5rem;
+            border: 0.1rem solid rgba(0, 0, 0, .1);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            margin: 2rem;
+            padding: 3rem 2rem;
+            border-radius: .5rem;
+            text-align: center;
+            transition: .2s linear;
+        }
+
+            .introducción.caja-contenedor .caja img {
+                height: 15rem;
+                width: 1rem;
+            }
+
+            .introducción .caja-contenedor .caja h3 {
+                font-size: 2rem;
+                color: #333;
+                padding-top: 1rem;
+            }
+
+            .introducción .caja-contenedor .caja p {
+                font-size: 1.3rem;
+                color: #555;
+                padding: 1rem 0;
+            }
+</style>
+<section class="introducción" id="introducción">
+    <div class="caja-contenedor">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="caja">
+            <div class="image">
+                <img class="imgobj" src="https://i.ibb.co/nryfDqt/img1.jpg">
+            </div>
+            <h3>Objetivo</h3>
+            <p>
+                para nosotros la sociedad, dentro de la comunidad del CECyT13 y tanto todos aquellos
+                que acudan al area de orientación dentro de esta institución,es nuestra prioridad, por eso hemos
+                puesto en proceso el hecho de investigar como lograremos llevar a cabo
+                brindando un apoyo y solución rápida al recibir un posible prediagnóstico para el
+                tratamiento psicológico del individuo mediante una aplicación web. Además de mejoras en
+                el programa base como añadir, editar y eliminar algún formulario o en dado caso actualizar
+                el mismo, así como también, el envió de los resultados del prediagnóstico al alumno que
+                tomo dicho test mediante su correo institucional. Además de hacer mas preciso el pre
+                diagnostico mejorando el sistema de puntajes.
+            </p>
+        </div>
+        <div class="caja">
+            <div class="image">
+                <img src="https://i.ibb.co/mcCybHN/Desarrollo-psicologico.jpg">
+                <h3>Desarrollo</h3>
+                <p>
+                    Consiste en realizar un formulario, el cual, se conteste una cierta cantidad de
+                    preguntas para obtener un prediagnóstico, al terminar está breve encuesta toda la
+                    información que se recabo y sé proceso se almacenara para obtener un documento con los
+                    resultados cada vez que el usuario lo requiera, para poder manejar su información,
+                    se le pedirá su consentimiento dentro de la aplicación web, los parámetros que
+                    tenemos previstos son diferentes escenarios psicológicos que pueda tener el usuario dandonos
+                    una delimitación dentro del propio formulario para así poder prediagnosticar al
+                    usuario. Así mismo, el usuario teniendo en cuenta su situación y que requiere ayuda pueda
+                    asistir al área de orientación con los resultados y poder tener esa información y abrir una
+                    carpeta para el usuario.
+                </p>
+
+            </div>
+        </div>
+
+        <section class="Padre">
+            <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+        </section>
+</section>
+

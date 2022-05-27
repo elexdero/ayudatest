@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "RegisConfirm";
+}
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+<h1><b>LOS DATOS QUE INGRESASTE FUERON LOS SIGUIENTES: :)</b></h1>
+<br />
+<table>
+    <tr>
+        <th><b>NOMBRE: </b></th>
+        <td>@ViewBag.Nombre</td>
+    </tr>
+    <tr>
+        <th><b>APELLIDO PATERNO:</b></th>
+        <td>@ViewBag.ApPaterno</td>
+    </tr>
+    <tr>
+        <th><b>APELLIDO MATERNO: </b></th>
+        <td>@ViewBag.ApMaterno</td>
+    </tr>
+    <tr>
+        <th><b>BOLETA:</b></th>
+        <td>@ViewBag.Boleta</td>
+    </tr>
+    <tr>
+        <th><b>Teléfono del Usuario: </b></th>
+        <td>@ViewBag.TelU</td>
+    </tr>
+    <tr>
+        <th><b>Teléfono del Tutor: </b></th>
+        <td>@ViewBag.TelT</td>
+    </tr>
+</table>
+<br />
+<hr />
+<p><b>TU ID ES EL SIGUIENTE: </b>@ViewBag.ID</p>
+<h3>*Recuerda anotarlo ya que lo necesitarás más adelante</h3>
+<br />
+<a asp-controller="EP1" asp-action="Clave" class="btn btn-primary">REGRESAR AL FORMULARIO</a>
+

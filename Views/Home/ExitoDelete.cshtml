@@ -1,0 +1,27 @@
+﻿@model PA.Models.IDModel; 
+@{
+    ViewData["Title"] = "Exito Al Eliminar";
+}
+
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+    
+    .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>El usuario con ID @Model._ID ha sido eliminado.</h1>
+<br />
+<h3><a class="btn btn-success" asp-action="Registrados">VER USUARIOS</a></h3>
+

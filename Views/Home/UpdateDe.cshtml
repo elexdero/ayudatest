@@ -1,0 +1,77 @@
+﻿@model PA.Models.IDModel;
+
+@{
+    ViewData["Title"] = "Actualizar Test Depresión";
+}
+
+<style>
+    table, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #fac3f1;
+        text-align: center;
+    }
+
+    th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #af276b;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        color: #af276b;
+    }
+
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>PREGUNTAS TEST DEPRESIÓN </h1>
+<br />
+<table style="width: 100%;">
+    <tr>
+        <th>NUMERO DE PREGUNTA</th>
+        <th>PREGUNTA</th>
+    </tr>
+    @foreach (var fila in @ViewBag.Test2.Rows)
+    {
+        <tr>
+            <td>@fila["No_Pregunta"]</td>
+            <td>@fila["Pregunta"]</td>
+        </tr>
+    }
+</table>
+<br />
+<br />
+<h1>Actualizar Pregunta</h1>
+<form asp-action="UDe" method="post">
+    Número de Pregunta: <input asp-for="_NoPregD" required class="form-control" />
+    <br />
+    Nueva Pregunta: <input asp-for="_PreguntaD" required class="form-control" />
+    <br />
+    <br />
+    <section class="Padre">
+        <button type="submit" class="btn">ACTUALIZAR</button>
+        <a asp-action="Registrados" class="btn"><i>REGRESAR A LA PESTAÑA ANTERIOR</i></a>
+        <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+    </section>
+</form>
+<br />
+<br />
+

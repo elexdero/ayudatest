@@ -1,0 +1,60 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<style>
+
+    h2 {
+        background: linear-gradient(#dbfc03,#fcdf03);
+        margin: 5px;
+        margin-left: 40%;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .regis h1 {
+        border-radius: 10px;
+        color: #af276b;
+    }
+    .regis {
+        padding: 40px;
+        margin: 2px;
+    }
+
+</style>
+<div class="regis">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>POR FAVOR INGRESA LOS DATOS QUE SE TE SOLICITAN: </h1>
+    <br />
+    <form asp-action="Regis" method="post">
+        Boleta: <input asp-for="_Boleta" required class="form-control" />
+        <br />
+        Nombre: <input asp-for="_Nombre" required class="form-control" />
+        <br />
+        Apellido Paterno: <input asp-for="_ApPaterno" required class="form-control" />
+        <br />
+        Apellido Materno: <input asp-for="_ApMaterno" required class="form-control" />
+        <br />
+        Teléfono: <input asp-for="_TelUser" required class="form-control" />
+        <br />
+        <br />
+        Captcha: <input asp-for="_Captcha" required class="form-control" />
+        <input asp-for="_CaptchaConfirm" value="@ViewBag.Captcha" hidden="hidden" class="form-control" />
+        <h2 class="col-2">@ViewBag.Captcha</h2>
+        <br />
+         <section class="Padre">
+            <button type="submit" class="btn">REGISTRARSE</button>
+            <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+        </section>
+    </form>
+    <br />
+    <h1>@ViewBag.Nota</h1>
+    <br />
+    <br /> 
+</div>
+
+

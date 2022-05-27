@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Test Depresion";
+}
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .Padre {
+        display: flex;
+    }
+</style>
+<h1>TEST DEPRESION</h1>
+<br />
+ <form>
+@foreach (var fila in @ViewBag.Test2.Rows)
+{
+<p>@fila["No_Pregunta"]. @fila["Pregunta"]</p>
+     <br />
+      <input type="radio" name="size" id="Op1" value="small">
+      <label for="Op1">En Absoluto</label>
+      <br>
+      <input type="radio" name="size" id="Op2" value="medium">
+      <label for="Op2">Levemente</label>
+      <br/>
+      <input type="radio" name="size" id="Op3" value="large">
+      <label for="Op3">Moderadamente</label>
+      <br />
+      <input type="radio" name="size" id="Op4" value="large">
+      <label for="Op4">Severamente</label>
+    <br />
+    <br />
+}
+</form>
+<section class="Padre">
+    <a asp-action="Index" class="btn"><i>FINALIZAR</i></a>
+    <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+</section>
+

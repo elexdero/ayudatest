@@ -1,0 +1,53 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .uno {
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    h1 {
+        background: linear-gradient(#dbfc03,#fcdf03);
+        margin: 5px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+</style>
+<div class="uno">
+     <br />
+     <br />
+     <br />
+    <form asp-action="LogInAdmin" method="post">
+        <br />
+        Usuario: <input asp-for="_Admin" required class="form-control" />
+        <br />
+        Contraseña: <input type="password" asp-for="_Pass" required class="form-control" />
+        <br />
+        Confirmar Contraseña: <input type="password" asp-for="_PassConfirm" required class="form-control" />
+        <br />
+        <section class="Padre">
+            <button type="submit" class="btn">INGRESAR</button>
+            <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+        </section>
+    </form>
+    <br />
+    <h2>@ViewBag.Msj</h2>
+    <br />
+    <br />
+    <br />
+</div>

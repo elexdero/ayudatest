@@ -1,0 +1,93 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Agendar Cita";
+}
+
+<style>
+    .msj {
+        width: 600px;
+        height: 150px;
+        border-radius: .5rem;
+        border-color: black;
+        border: solid;
+        border: 2px;
+    }
+
+    .caja-contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .caja {
+        flex: 1 1 30rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid rgba(0, 0, 0, .1);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        margin: 2rem;
+        padding: 3rem 2rem;
+        border-radius: .5rem;
+        text-align: center;
+        transition: .2s linear;
+    }
+
+        .caja h3 {
+            font-size: 2rem;
+            color: #333;
+            padding-top: 1rem;
+        }
+
+        .caja p {
+            font-family: "Franklin Gothic";
+            font-size: 1.3rem;
+            color: #555;
+            padding: 1rem 0;
+        }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="caja">
+    <h3>⚠️IMPORTANTE⚠️​</h3>
+    <h3>LA ESTRUCTURA DEL CORREO DEBE SER LA SIGUIENTE:</h3>
+    <p>
+        Hola, buenos días, buenas tardes o noches, soy alumno del cecyt 13, mi nombre es [Nombre Completo] y mi boleta es [Boleta]. El motivo de este correo es porque me gustaría agendar una cita con ustedes
+    </p>
+</div>
+<br />
+<br />
+<h3 style="color:blue;">
+    @ViewBag.Mensaje
+</h3>
+<br />
+<br />
+<br />
+<h2>AGENDAR CITA CON ESPECIALISTAS DEL CECYT :)</h2>
+<br />
+<form method="post" enctype"multipart /form-data" style="width:600px;" class="formcorreo">
+    <div>
+        <input class="form-control" type="email" name="para" placeholder="email de destino" hidden="hidden" value="davidavila1604@gmail.com" />
+    </div>
+    <br />
+    <div>
+        <label>Asunto:</label>
+        <input class="form-control" type="text" name="asunto" placeholder="Asunto" />
+    </div>
+    <br />
+    <div>
+        <label>Mensaje:</label>
+        <br />
+        <textarea class="msj" name="mensaje" placeholder="Escriba su mensaje"></textarea>
+    </div>
+    <br />
+    <div>
+        <button id="enviar" class="btn btn-primary btncorreo" type="submit">ENVIAR CORREO</button>
+    </div>
+</form>
+<br />
+<br />

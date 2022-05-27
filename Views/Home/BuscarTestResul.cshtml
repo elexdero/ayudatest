@@ -1,0 +1,38 @@
+﻿@model PA.Models.IDModel;
+    @{
+        ViewData["Title"] = "Buscar PDF";
+    }
+
+    <div class="regis">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1>POR FAVOR INGRESA TU ID QUE SE TE SOLICITAN PARA DAR CON TUS ARCHIVOS: </h1>
+        <br />
+        <form asp-action="BuscarTestResul" method="post">
+            ID: <input asp-for="_ID" required class="form-control" />
+            <br />
+            <br />
+            <br />
+            Captcha: <input asp-for="_Captcha" required class="form-control" />
+            <input asp-for="_CaptchaConfirm" value="@ViewBag.Captcha" hidden="hidden" class="form-control" />
+            <br />
+            <br />
+            <h2 class="col-2">@ViewBag.Captcha</h2>
+            <br />
+            <section class="Padre">
+                <button type="submit" class="btn">BUSCAR</button>
+                <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+            </section>
+        </form>
+        <br />
+        <h1>@ViewBag.Nota</h1>
+        <h1>@ViewBag.Error</h1>
+        <br />
+        <br />
+    </div>
+

@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Instrucciones";
+}
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .uno {
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .welcome {
+        text-align: right;
+        font-size: 20px;
+    }
+
+    #axl {
+        width: 100%;
+    }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="test1">
+    <div class="welcome">
+        @foreach (var fila in @ViewBag.Nom.Rows)
+        {
+            <tr>
+                <td><b>BIENVENIDO/A: </b> </td>
+                <td>@fila["Nombre"]</td>
+                <td>@fila["ApPaterno"]</td>
+                <td>@fila["ApMaterno"]</td>
+            </tr>
+        }
+    </div>
+    <div class="uno">
+        <br />
+        <br />
+        <b />
+        <img id="axl" src="https://i.ibb.co/M8hkg89/Whats-App-Image-2022-05-17-at-2-56-47-AM.jpg">
+        <br />
+        <br />
+        <br />
+       
+            <section class="Padre">
+                <a asp-action="TestAnsiedad" class="btn"><i>CONTINUAR<i></a>
+                    <a asp-action="Index" class="btn"><i> INICIO</i></a>
+</section>
+        <br />
+        <br />
+    </div>
+    <br />
+    <br />
+</div>

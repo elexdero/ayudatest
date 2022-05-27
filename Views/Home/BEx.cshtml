@@ -1,0 +1,61 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Encontrado";
+}
+<style>
+    table, td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #fac3f1;
+        text-align: center;
+    }
+
+    th {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: #af276b;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        color: #af276b;
+    }
+
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+</style>
+ <br /> <br /> <br /> <br /> <br /> <br />
+<h1>RESULTADOS QUE COINCIDEN CON LA BUSQUEDA</h1>
+<br />
+<table style="width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO PATERNO</th>
+        <th>APELLIDO MATERNO</th>
+    </tr>
+    @foreach (var fila in @ViewBag.Mensajito.Rows)
+    {
+        <tr>
+            <td>@fila["ID"]</td>
+            <td>@fila["Nombre"]</td>
+            <td>@fila["ApPaterno"]</td>
+            <td>@fila["ApMaterno"]</td>
+        </tr>
+    }
+</table>
+<br />
+<br />
+<a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+
+

@@ -1,0 +1,46 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1><b>LOS DATOS QUE INGRESASTE FUERON LOS SIGUIENTES: :)</b></h1>
+<br />
+<table>
+    <tr>
+        <th><b>NOMBRE: </b></th>
+        <td>@Model._Nombre</td>
+    </tr>
+    <tr>
+        <th><b>APELLIDO PATERNO:</b></th>
+        <td>@Model._ApPaterno</td>
+    </tr>
+    <tr>
+        <th><b>APELLIDO MATERNO: </b></th>
+        <td>@Model._ApMaterno</td>
+    </tr>
+    <tr>
+        <th><b>BOLETA:</b></th>
+        <td>@Model._Boleta</td>
+    </tr>
+    <tr>
+        <th><b>TELÉFONO DEL USUARIO: </b></th>
+        <td>@Model._TelUser</td>
+    </tr>
+</table>
+<br />
+<hr />
+<h1><b>TU ID ES EL SIGUIENTE: </b>@ViewBag.ID</h1>
+<br />
+<br />
+<div align="left"><a asp-controller="Home" asp-action="Menu" class="btn btn-primary">FINALIZAR REGISTRO</a></div>

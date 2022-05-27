@@ -1,0 +1,29 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Actualización Exitosa";
+}
+
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>LA PREGUNTA No° @Model._NoPregD DEL TEST DE DEPRESIÓN HA SIDO ACTUALIZADA CORRECTAMENTE :)</h1>
+<br />
+<section class="Padre">
+    <a asp-action="UpdateDe" class="btn"><i>REGRESAR A LA PESTAÑA ANTERIOR</i></a>
+    <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+</section>
+

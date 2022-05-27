@@ -1,0 +1,48 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Recuperar ID";
+}
+
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .uno {
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        padding: 20px;
+    }
+
+</style>
+<div class="uno">
+    <br />
+     <br />
+      <br />
+    <h1><b>Ingresa los datos que se te solicitan para dar con tu ID ッ</b></h1>
+    <form asp-action="Buscar" method="post">
+        <br />
+        Nombre: <input asp-for="_Nombre" required class="form-control" />
+        <br />
+        Apellido Paterno: <input asp-for="_ApPaterno" required class="form-control" />
+        <br />
+        Apellido Materno: <input asp-for="_ApMaterno" required class="form-control" />
+        <br />
+        <section class="Padre">
+            <button type="submit" class="btn">BUSCAR</button>
+            <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+        </section>
+    </form>
+    <br />
+    <h2>@ViewBag.Msj</h2>
+    <br />
+    <br />
+</div>
+

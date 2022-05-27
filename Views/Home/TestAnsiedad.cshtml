@@ -1,0 +1,686 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Test Ansiedad";
+}
+<style>
+    .btn {
+        background: linear-gradient(#6a1bd1,#db88ff);
+        border: 2px solid black;
+        margin-left: 70px;
+    }
+
+        .btn:hover {
+            background: linear-gradient(#6a1bd1,#db88ff);
+            opacity: 0.5;
+        }
+
+    .uno {
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .welcome {
+        text-align: right;
+        font-size: 20px;
+    }
+
+    #axl {
+        width: 100%;
+    }
+
+    .test1 h1 {
+        border-radius: 10px;
+        color: #af276b;
+    }
+
+    .test1 {
+        padding: 40px;
+        margin: 10px;
+    }
+
+        .test1 input {
+            background-color: #ffe8fb;
+        }
+
+    .welcome {
+        text-align: right;
+        font-size: 20px;
+    }
+</style>
+<div class="test1">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>TEST ANSIEDAD</h1>
+    <br />
+    <form asp-action="ResultadosAnsiedad" method="post">
+        <fieldset>
+            @foreach (var fila in @ViewBag.P1.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <div>
+                    <input type="radio" name="Op1" value="1" required>
+                    <label for="Op1" required>En Absoluto</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="Op1" value="2" required>
+                    <label for="Op1" required>Levemente</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="Op1" value="3" required>
+                    <label for="Op1" required>Moderadamente</label>
+                </div>
+                <div>
+                    <input type="radio" name="Op1" value="4" required>
+                    <label for="Op1" required>Severamente</label>
+                </div>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P2.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op2" value="1" required>
+                <label for="Op2" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op2" value="2" required>
+                <label for="Op2" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op2" value="3" required>
+                <label for="Op2" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op2" value="4" required>
+                <label for="Op2" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P3.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op3" value="1" required>
+                <label for="Op3" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op3" value="2" required>
+                <label for="Op3" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op3" value="3" required>
+                <label for="Op3" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op3" value="4" required>
+                <label for="Op3" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P4.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op4" value="1" required>
+                <label for="Op4" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op4" value="2" required>
+                <label for="Op4" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op4" value="3" required>
+                <label for="Op4" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op4" value="4" required>
+                <label for="Op4" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P5.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op5" value="1" required>
+                <label for="Op5" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op5" value="2" required>
+                <label for="Op5" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op5" value="3" required>
+                <label for="Op5" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op5" value="4" required>
+                <label for="Op5" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P6.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op6" value="1" required>
+                <label for="Op6" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op6" value="2" required>
+                <label for="Op6" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op6" value="3" required>
+                <label for="Op6" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op6" value="4" required>
+                <label for="Op6" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P7.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op7" value="1" required>
+                <label for="Op7" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op7" value="2" required>
+                <label for="Op7" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op7" value="3" required>
+                <label for="Op7" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op7" value="4" required>
+                <label for="Op7" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P8.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op8" value="1" required>
+                <label for="Op8" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op8" value="2" required>
+                <label for="Op8" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op8" value="3" required>
+                <label for="Op8" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op8" value="4" required>
+                <label for="Op8" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P9.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op9" value="1" required>
+                <label for="Op9" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op9" value="2" required>
+                <label for="Op9" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op9" value="3" required>
+                <label for="Op9" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op9" value="4" required>
+                <label for="Op9" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P10.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op10" value="1" required>
+                <label for="Op10" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op10" value="2" required>
+                <label for="Op10" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op10" value="3" required>
+                <label for="Op10" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op10" value="4" required>
+                <label for="Op10" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P11.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op11" value="1" required>
+                <label for="Op11" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op11" value="2" required>
+                <label for="Op11" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op11" value="3" required>
+                <label for="Op11" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op11" value="4" required>
+                <label for="Op11" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P12.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op12" value="1" required>
+                <label for="Op12" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op12" value="2" required>
+                <label for="Op12" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op12" value="3" required>
+                <label for="Op12" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op12" value="4" required>
+                <label for="Op12" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P13.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op13" value="1" required>
+                <label for="Op13" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op13" value="2" required>
+                <label for="Op13" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op13" value="3" required>
+                <label for="Op13" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op13" value="4" required>
+                <label for="Op13" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P14.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op14" value="1" required>
+                <label for="Op14" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op14" value="2" required>
+                <label for="Op14" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op14" value="3" required>
+                <label for="Op14" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op14" value="4" required>
+                <label for="Op14" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P15.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op15" value="1" required>
+                <label for="Op15" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op15" value="2" required>
+                <label for="Op15" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op15" value="3" required>
+                <label for="Op15" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op15" value="4" required>
+                <label for="Op15" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P16.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op16" value="1" required>
+                <label for="Op16" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op16" value="2" required>
+                <label for="Op16" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op16" value="3" required>
+                <label for="Op16" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op16" value="4" required>
+                <label for="Op16" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P17.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op17" value="1" required>
+                <label for="Op17" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op17" value="2" required>
+                <label for="Op17" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op17" value="3" required>
+                <label for="Op17" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op17" value="4" required>
+                <label for="Op17" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P18.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op18" value="1" required>
+                <label for="Op18" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op18" value="2" required>
+                <label for="Op18" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op18" value="3" required>
+                <label for="Op18" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op18" value="4" required>
+                <label for="Op18" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P19.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op19" value="1" required>
+                <label for="Op19" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op19" value="2" required>
+                <label for="Op19" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op19" value="3" required>
+                <label for="Op19" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op19" value="4" required>
+                <label for="Op19" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P20.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op20" value="1" required>
+                <label for="Op20" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op20" value="2" required>
+                <label for="Op20" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op20" value="3" required>
+                <label for="Op20" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op20" value="4" required>
+                <label for="Op20" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            @foreach (var fila in @ViewBag.P21.Rows)
+            {
+                <tr>
+                    <td>@fila["No_Pregunta"].</td>
+                    <td>@fila["Pregunta"]</td>
+                </tr>
+            }
+            <div>
+                <input type="radio" name="Op21" value="1" required>
+                <label for="Op21" required>En Absoluto</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op21" value="2" required>
+                <label for="Op21" required>Levemente</label>
+            </div>
+
+            <div>
+                <input type="radio" name="Op21" value="3" required>
+                <label for="Op21" required>Moderadamente</label>
+            </div>
+            <div>
+                <input type="radio" name="Op21" value="4" required>
+                <label for="Op21" required>Severamente</label>
+            </div>
+        </fieldset>
+        <br />
+        <br />
+        <hr />
+        <br />
+        INGRESA TU ID: <input asp-for="_ID" required class="form-control" />
+        <section class="Padre">
+            <button type="submit" class="btn">CONTINUAR</button>
+            <a asp-action="Index" class="btn"><i> INICIO</i></a>
+        </section>
+    </form>
+    <br />
+    <br />
+</div>
+
+

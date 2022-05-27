@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<style>
+    h1 {
+        background-color: #fac3f1;
+        border-radius: 10px;
+        margin: 0px;
+    }
+    .body {
+        padding: 40px;
+        margin: 10px;
+    }
+    #btregis {
+        background-color: #af276b;
+        color: white;
+    }
+    #btrc {
+        background-color: #af276b;
+        color: white;
+    }
+    #btlog {
+        background-color: #af276b;
+        color: white;
+    }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>@ViewBag.Mensaje</h1>
+<div class="body">
+    <h2>SELECIONA LA OPCIÓN QUE DESEAS REALIZAR:</h2>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="Regis" class="btn" id="btregis">REGISTRARSE</a>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="LogIn" class="btn" id="btlog">REALIZAR CUESTIONARIO</a>
+    <br />
+    <br />
+    <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+    <br />
+    <br />
+</div>
+
+

@@ -1,0 +1,56 @@
+﻿@model PA.Models.IDModel;
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<style>
+
+    h2 {
+        background: linear-gradient(#dbfc03,#fcdf03);
+        margin: 5px;
+        margin-left: 40%;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .regis h1 {
+        border-radius: 10px;
+        color: #af276b;
+    }
+    .regis {
+        padding: 40px;
+        margin: 2px;
+    }
+
+</style>
+<div class="inises">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>INGRESA TU ID PARA CONTINUAR: </h1>
+    <br />
+    <form asp-action="LogIn" method="post">
+        ID: <input asp-for="_ID" required class="form-control" />
+        <input asp-for="_CaptchaConfirm" value="@ViewBag.Captcha" hidden="hidden" class="form-control" />
+        <br />
+        <br />
+        <br />
+        Captcha: <input asp-for="_Captcha" required class="form-control" />
+        <input asp-for="_CaptchaConfirm" value="@ViewBag.Captcha" hidden="hidden" class="form-control" />
+        <h2 class="col-2">@ViewBag.Captcha</h2>
+        <br />
+        <section class="Padre">
+            <button type="submit" class="btn">CONTINUAR</button>
+            <a asp-action="Index" class="btn"><i>REGRESAR AL INICIO</i></a>
+        </section>
+    </form>
+    <br />
+    <h1>@ViewBag.Nota</h1>
+    <h1>@ViewBag.error</h1>
+    <br />
+    <br />
+</div>
+

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Menu Archivos";
+}
+
+<style>
+    h1 {
+        background-color: #fac3f1;
+        border-radius: 10px;
+        margin: 0px;
+    }
+
+    .body {
+        padding: 40px;
+        margin: 10px;
+    }
+</style>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>@ViewBag.Mensaje</h1>
+<div class="body">
+    <h2>SELECIONA LA OPCIÓN QUE DESEAS REALIZAR:</h2>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="BuscarArchivo" class="btn" id="btregis">BUSCAR PDF REGISTRO</a>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="BuscarTestResul" class="btn" id="btn">BUSCAR PDF RESULTADO ANSIEDAD</a>
+    <br />
+    <br />
+    <a asp-controller="Home" asp-action="BuscarTestResulD" class="btn" id="btn">BUSCAR PDF RESULTADO DEPRESION</a>
+    <br />
+    <br />
+    <a asp-action="Index" class="btn"><i>INICIO</i></a>
+    <br />
+    <br />
+</div>
+
